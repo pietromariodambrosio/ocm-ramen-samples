@@ -16,7 +16,7 @@ spec:
         appname: busybox
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/openshift/busybox:stable
+      - image: image-registry.openshift-image-registry.svc:5000/openshift/busybox:latest
         imagePullPolicy: IfNotPresent
         name: busybox
         command: ['sh', '-c', 'trap exit TERM; while true; do echo $(date) | tee -a /mnt/test/outfile; sync; sleep 1; done']
